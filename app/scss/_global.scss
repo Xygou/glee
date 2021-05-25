@@ -51,3 +51,19 @@ textarea,
 select {
   font: inherit;
 }
+
+
+body {
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.container--large {
+  max-width: 1770px;
+}

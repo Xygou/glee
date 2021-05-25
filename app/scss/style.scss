@@ -1,7 +1,183 @@
 @import 'vars';
 @import 'fonts';
-@import 'reset';
+@import 'libs';
 @import 'global';
+
+
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 45px 0;
+}
+
+.menu {
+  @extend %rubik-500;
+  &__list {
+    display: flex;
+    font-weight: 500;  
+  }
+
+  &__list-item:not(:last-child) {
+    margin-right: 30px;
+  }
+  
+  &__list-link {
+    color: $menu-link-color;
+    transition: color 0.3s;
+    &:hover {
+      color: $main-color;
+    }
+  }
+}
+
+.user-nav {
+  display: flex;
+  &__icon {
+    width: 19px;
+    height: 17px;
+    fill: #243f4d;  
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__link--search {
+    background-color: #edf1f4;
+    border-radius: 50%;
+    width: 52px;
+    height: 52px;
+    transition: background-color 0.3s;
+    &:hover {
+      background-color: $main-gray;
+    }
+  }
+
+  &__link--search,
+  &__link--basket {
+    margin-right: 22px;
+  }
+
+  &__link--like,
+  &__link--basket {
+    position: relative;
+    padding: 12px 30px 12px 41px;
+    border-radius: 30px 0 0 30px;
+    background-color: $main-color;
+  }
+
+  &__link--basket {
+    border-radius: 0 30px 30px 0;
+    padding: 12px 41px 12px 30px;
+  }
+
+  &__num{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    color: #000;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border-radius: 50%;
+    font-size: 10px;
+    right: 22px;
+    top: 11px;
+  }
+
+  &__num--basket {
+    right: 34px;
+  }
+
+  &__link--menu {
+    border-radius: 50%;
+    width: 52px;
+    height: 52px;
+    background-color: $main-gray;
+    transition: background-color 0.3s;
+    &:hover {
+      background-color: $main-color;
+    }
+  }
+
+  &__icon--menu {
+    fill: #fff;
+  }
+}
+
+.top-slider {
+  background-image: url(../images/top-slider-bg.png);
+  background-repeat: no-repeat;
+  background-position:  86% 50%;
+  padding: 220px 0 45px;
+  background-color: $main-color;
+  margin-bottom: 100px;
+  color: $title-color;
+  &__title {
+    font-size: 70px;
+    @extend %rubik-500;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    max-width: 380px;
+    font-size: 18px;
+    @extend %rubik-400;
+    margin-bottom: 40px;
+  }
+
+  &__wrapper {
+    display: flex;
+    margin-bottom: 200px;
+  }
+
+  &__link {
+    @extend %btn;
+    padding-right: 100px;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: '';
+      background-image: url(../images/icons/arrow.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 22px;
+      height: 9px;
+      right: 20px;
+      top: 26px;
+    }  
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+
+    li:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      border-radius: 50%;
+      background-color: #fff;
+      font-size: 10px;
+      width: 18px;
+      line-height: 1.5;
+      @extend %rubik-500;
+      color: $title-color;
+    }
+  }
+
+}
+
+
+
 
 
 @import 'media';

@@ -1,0 +1,40 @@
+$menu-link-color: #436372;
+$main-color: #fcd7b6;
+$main-gray: #a3bbc8;
+$title-color : #243f4d;
+
+%rubik-400 {
+  font-family: 'Rubik-Regular';
+  font-weight: 400;
+}
+
+
+%rubik-500 {
+  font-family: 'Rubik-Medium';
+  font-weight: 500;
+}
+
+%dmSans-400 {
+  font-family: 'DM Sans-Regular';
+  font-weight: 400;
+}
+
+%dmSans-500 {
+  font-family: 'DM Sans-Medium';
+  font-weight: 500;
+}
+
+%dmSans-700 {
+  font-family: 'DM Sans-Bold';
+  font-weight: 700;
+}
+
+
+%btn {
+  display: inline-block;
+  background-color: $main-gray;
+  color: #fff;
+  @extend %rubik-500;
+  font-size: 15px;
+  padding: 22px 26px; 
+}
