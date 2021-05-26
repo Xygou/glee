@@ -8,8 +8,8 @@ html {
   box-sizing: inherit;
 } 
 
-ul[class],
-ol[class] {
+ul,
+ol {
   padding: 0;
 }
 
@@ -21,8 +21,8 @@ h4,
 h5,
 h6,
 p,
-ul[class],
-ol[class],
+ul,
+ol,
 li,
 figure,
 figcaption,
@@ -36,7 +36,7 @@ a{
   text-decoration: none;
 }
 
-ul[class] {
+ul {
   list-style: none;
 }
 
@@ -62,6 +62,10 @@ body {
   max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+.container--medium{
+  max-width: 1470px;
 }
 
 .container--large {

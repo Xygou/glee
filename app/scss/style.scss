@@ -116,12 +116,12 @@
   background-position:  86% 50%;
   padding: 220px 0 45px;
   background-color: $main-color;
-  margin-bottom: 100px;
   color: $title-color;
   &__title {
     font-size: 70px;
     @extend %rubik-500;
     margin-bottom: 20px;
+    max-width: 420px;
   }
 
   &__text {
@@ -133,6 +133,7 @@
 
   &__wrapper {
     display: flex;
+    justify-content: space-between;
     margin-bottom: 200px;
   }
 
@@ -165,17 +166,206 @@
       cursor: pointer;
       border: none;
       border-radius: 50%;
-      background-color: #fff;
+      background-color: #fde3cc;
       font-size: 10px;
-      width: 18px;
+      width: 30px;
+      height: 30px;
       line-height: 1.5;
       @extend %rubik-500;
       color: $title-color;
+      transition: background-color 0.3s;
+      &:hover {
+        background-color: #fff;
+      }
     }
+  }
+}
+
+.footer {
+  padding-top: 80px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: $main-text;
+  @extend %rubik-400;
+  a {
+    transition: color 0.3s;
+    &:hover {
+      color: $main-color;
+    }
+  }
+}
+
+.footer-top {
+  display: flex;
+  margin-bottom: 65px;
+  &__logo {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
+  &__contact {
+    max-width: 200px;
+    margin-right: 100px;
+  }
+
+  &__nav {
+    max-width: 150px;
+    margin-right: 180px;
+  }
+
+  &__form-wrapper {
+    margin-left: auto;
+  }
+
+  &__address,
+  &__phone {
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+
+  &__title {
+    padding-top: 15px;
+    font-size: 16px;
+    color:#2e2f50;
+    @extend %dmSans-700;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+
+  &__item {
+    margin-bottom: 10px;
+  }
+
+  &__link,
+  &__phone,
+  &__email {
+    color: inherit;
+  }
+  
+  &__phone span,
+  &__email span {
+    text-transform: uppercase;
+  }
+
+  &__text {
+    max-width: 240px;
+    margin-bottom: 35px;
+
+  }
+  &__form {
+    display: flex;
+  }
+
+  &__form-input {
+    padding: 0 15px ;
+    border: none;
+    background-color: #fef7f0;
+    height: 40px;
+    &::placeholder {
+      padding: 0 5px 0 15px;
+      @extend %dmSans-400;
+      color: #234969;
+    }
+  }
+
+  &__form-btn {
+    border: none;
+    @extend %btn;
+    padding: 9px 15px;
+    @extend %dmSans-400;  
   }
 
 }
 
+.footer-bottom {
+  border-top: 1px solid #dae4e9;
+  padding: 35px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__nav {
+    display: flex; 
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+    position: relative;
+    &::after {
+      content: '|';
+      position: absolute;
+      color: $main-text;
+      right: -18px;
+    }
+  }
+  &__link {
+    color: $main-text;
+  }
+}
+
+
+.info {
+  background-color: #fef7f0;
+
+  &__items {
+    display: flex;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 38px;
+    width: 100%;
+    &:not(:last-child) {
+      border-right: 1px solid #e8e4df;
+    }
+  }
+
+  &__wrapper { 
+    padding-left: 75px;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      background-repeat: no-repeat;
+      left: 0;
+      width: 65px;
+      height: 55px;
+    }
+
+    &--time::before {
+      background-image: url(../images/icons/time.svg);
+    }
+
+    &--truck::before {
+      background-image: url(../images/icons/delivery-truck.svg);
+    }
+    
+    &--card::before {
+      background-image: url(../images/icons/credit-card.svg);
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    @extend %dmSans-700;
+    color: #414141;
+    margin-bottom: 5px;
+  }
+
+  &__text {
+    @extend %dmSans-400;
+    line-height: 2.2;
+    color: #585858;
+    font-size: 16px;
+    max-width: 215px;
+    &--mini {
+      max-width: 200px
+    }
+  }
+
+
+}
 
 
 
