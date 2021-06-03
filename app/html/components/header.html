@@ -1,67 +1,85 @@
 <header class="header">
+  <h1 class="visually-hidden">
+    Glee. Home furniture store
+  </h1>
   <div class="container container--large">
-    <div class="header__inner">
+    <nav class="header__inner">
       <a class="logo" href="#">
-        <img class="logo__img" src="images/logo.png" alt="Company`s logo">
+        <img class="logo__img" src="images/logo.png" alt="Company`s logo" width="150" height="40">
+        <span class="visually-hidden">
+          Store logo
+        </span>
       </a>
-      <nav class="menu">
-        <ul class="menu__list">
-          <li class="menu__list-item">
-            <a class="menu__list-link" href="#">
-              Home +
-            </a>
-          </li>
-          <li class="menu__list-item">
-            <a class="menu__list-link" href="#">
-              About
-            </a>
-          </li>
-          <li class="menu__list-item">
-            <a class="menu__list-link" href="#">
-              Services
-            </a>
-          </li>
-          <li class="menu__list-item">
-            <a class="menu__list-link" href="#">
-              Pages +
-            </a>
-          </li>
-          <li class="menu__list-item">
-            <a class="menu__list-link" href="#">
-              News
-            </a>
-          </li>
-          <li class="menu__list-item">
-            <a class="menu__list-link" href="#">
-              Contact
-            </a>
-          </li>  
-        </ul>
-      </nav>
+      <ul class="menu">
+        <li class="menu__item">
+          <a class="menu__link" href="#">
+            Home <span>+</span>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">
+            About
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">
+            Services
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">
+            Pages <span>+</span>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">
+            News
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">
+            Contact
+          </a>
+        </li>
+      </ul>
       <div class="user-nav">
-        <a class="user-nav__link user-nav__link--search" href="#">
+        <button class="user-nav__link user-nav__link--search">
           <svg class="user-nav__icon user-nav__icon--search">
             <use xlink:href="images/sprite.svg#search-icon"></use>
           </svg>
-        </a>
-        <a class="user-nav__link user-nav__link--like" href="#">
-          <svg class="user-nav__icon user-nav__icon--like">
-            <use xlink:href="images/sprite.svg#like-icon"></use>
-          </svg>
-          <div class="user-nav__num user-nav__num--like">0</div>
-        </a>
-        <a class="user-nav__link user-nav__link--basket" href="#">
-          <svg class="user-nav__icon user-nav__icon--basket">
-            <use xlink:href="images/sprite.svg#basket-icon"></use>
-          </svg>
-          <div class="user-nav__num user-nav__num--basket">0</div>
-        </a>
-        <a class="user-nav__link user-nav__link--menu" href="#">
+          <span class="visually-hidden">
+            Search button
+          </span>
+        </button>
+        <div class="user-nav__wrapper">
+          <a class="user-nav__link user-nav__link--like" href="#">
+            <svg class="user-nav__icon user-nav__icon--like">
+              <use xlink:href="images/sprite.svg#like-icon"></use>
+            </svg>
+            <div class="user-nav__num user-nav__num--like">0</div>
+            <span class="visually-hidden">
+              Link to favorites page
+            </span>
+          </a>
+          <a class="user-nav__link user-nav__link--basket" href="#">
+            <svg class="user-nav__icon user-nav__icon--basket">
+              <use xlink:href="images/sprite.svg#basket-icon"></use>
+            </svg>
+            <div class="user-nav__num user-nav__num--basket">0</div>
+            <span class="visually-hidden">
+              Go to cart page
+            </span>
+          </a>
+        </div>
+        <button class="user-nav__link user-nav__link--menu">
           <svg class="user-nav__icon user-nav__icon--menu">
             <use xlink:href="images/sprite.svg#menu-icon"></use>
           </svg>
-        </a>
+          <span class="visually-hidden">
+            Menu button
+          </span>
+        </button>
       </div>
-    </div>
+    </nav>
   </div>
 </header>

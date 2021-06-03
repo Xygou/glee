@@ -1,41 +1,54 @@
-$menu-link-color: #436372;
-$main-color: #fcd7b6;
-$main-gray: #a3bbc8;
-$title-color : #243f4d;
-$main-text: #7b7b7b;
-
-%rubik-400 {
-  font-family: 'Rubik-Regular';
-  font-weight: 400;
-}
+$red400: #fcd7b6;
+$orange100:#fde7d3;
+$orange50:#e8e4df;
 
 
-%rubik-500 {
-  font-family: 'Rubik-Medium';
-  font-weight: 500;
-}
-
-%dmSans-400 {
-  font-family: 'DM Sans-Regular';
-  font-weight: 400;
-}
-
-%dmSans-500 {
-  font-family: 'DM Sans-Medium';
-  font-weight: 500;
-}
-
-%dmSans-700 {
-  font-family: 'DM Sans-Bold';
-  font-weight: 700;
-}
+$blue700: #243f4d;
+$blue670:#2e2f50;
+$blue650: #234969;
+$blue600: #436372;
+$blue200: #a3bbc8;
+$blue150: #a3bac7;
+$blue120: #dae4e9;
+$blue100:#edf1f4;
 
 
-%btn {
+$white500: #414141;
+$white450: #585858;
+$white400: #7b7b7b;
+$white200: #8b8b8b;
+$white100: #fef7f0;
+$white: #fff;
+
+$black-shadow: rgba(37, 37, 37, 0.05);
+$black100: #1a1a1a; 
+$black: #000;
+
+$Rubik: 'Rubik';
+$DMSans: 'DMSans';
+
+
+
+@mixin btn {
   display: inline-block;
-  background-color: $main-gray;
-  color: #fff;
-  @extend %rubik-500;
+  background-color: $blue200;
+  color: $white;
+  font-family: $Rubik;
+  font-weight: 500;;
   font-size: 15px;
   padding: 22px 26px; 
 }
+
+@mixin text-clamp($lines: 2, $line-height: false) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+
+  // Fallback for non-Webkit browsers
+  // (won't show `…` at the end of the block)
+  @if $line-height {
+      max-height: $line-height * $lines * 1px;
+  }
+}
+

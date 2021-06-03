@@ -1,0 +1,115 @@
+.top-slider {
+  padding: 100px 0 45px;
+  background-color: $red400;
+  color: $blue700;
+  max-width: 1770px;
+  
+  &__content {
+    margin: 0 100px 85px 0;
+  }
+
+  &__title {
+    font-size: 70px;
+    @include text-clamp;
+    font-family: $Rubik;
+    font-weight: 500;
+    margin-bottom: 20px;
+    max-width: 420px;
+    text-transform: uppercase;
+  }
+
+  &__img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 640px;
+  }
+
+  &__img {
+    width: 640px;
+    height: 264px;
+  }
+
+  &__text {
+    max-width: 380px;
+    font-size: 18px;
+    font-family: $Rubik;
+    margin-bottom: 40px;
+  }
+
+  &__wrapper {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url(../images/top-slider-bg.png);
+      background-repeat: no-repeat;
+      background-position:  100% 50%;
+      height: 640px;
+      width: 640px;
+      right: 160px;
+      z-index: -1;
+    }
+  }
+
+
+  &__link {
+    @include btn;
+    padding-right: 100px;
+    position: relative;
+    transition: transform 0.5s;
+    &::after {
+      position: absolute;
+      content: '';
+      background-image: url(../images/icons/arrow.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 22px;
+      height: 9px;
+      right: 20px;
+      top: 26px;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      transform: translateX(20px);
+    }
+    
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    li {
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      border-radius: 50%;
+      background-color: #fde3cc;
+      font-size: 10px;
+      width: 30px;
+      height: 30px;
+      line-height: 1.5;
+      font-family: $Rubik;
+      font-weight: 500;
+      color: $blue700;
+      transition: background-color 0.3s;
+      &:hover,
+      &:focus {
+        background-color: $white;
+      }
+    }
+  }
+
+  .slick-dots .slick-active button {
+    background-color: $white;
+  }
+}

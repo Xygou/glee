@@ -1,0 +1,128 @@
+.products-week {
+  padding: 70px 0;
+  font-family: $DMSans;
+  font-weight: 700;
+
+  &__title {
+    font-size: 36px; 
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &__filter {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__pick {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  &__btn {
+    border: none;
+    background-color: $white;
+    margin-bottom: 70px;
+    color: $white200;
+    font-size: 16px;
+    cursor: pointer;
+    &:focus,
+    &:hover,
+    &:active {
+      color: $black100;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 30px;
+  }
+}
+
+.product-card {
+  position: relative;
+  box-shadow: 0px 6px 47px 3px $black-shadow;
+  max-width: 270px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding-top: 28px;
+  padding-bottom: 40px;
+  text-align: center;
+  font-family: $DMSans;
+
+  &__image {
+    width: 186px;
+    height: 195px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+  }
+  
+  &__name {
+    color: $blue700;
+    font-weight: 500;
+    margin-bottom: 15px;
+    padding: 0 15px;
+  }
+
+  &__price {
+    color: $blue200;
+    font-weight: 700;
+  }
+
+  &__icon {
+    width: 25px;
+    height: 20px;
+    fill: $blue150;
+    transition: fill 0.3s;
+  }
+
+  &__link-box {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    left: 0;
+    bottom: 150px;
+    transform: translateX(200%);
+    transition: transform 0.3s;
+  }
+  
+  &:hover {
+    .product-card__link-box {
+      transform: translateX(0);
+    }
+  }
+
+  &__btn {
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+
+  &__link {
+    background-color: $white;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 6px 4px 3px $white200;
+    transition: background-color 0.3s;
+    &:hover {
+      background-color: $blue150;
+      .product-card__icon {
+        fill: $white;
+      }
+    }
+  }  
+}

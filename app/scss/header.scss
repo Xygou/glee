@@ -1,0 +1,136 @@
+.header__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 45px 0;
+  .logo {
+    margin-right: 170px
+  }
+}
+
+.menu {
+  display: flex;
+  font-family: $Rubik;
+  font-weight: 500;
+  margin: auto;
+  &__item {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+  
+
+  &__link {
+    color: $blue600;
+    transition: color 0.3s;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $red400;
+    }
+  }
+}
+
+.user-nav {
+  display: flex;
+  &__icon {
+    width: 19px;
+    height: 17px;
+    fill: $blue700;  
+  }
+
+  &__wrapper {
+    background-color: $red400;
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+    margin: 0 20px;
+    position: relative;
+    &::after {
+      content: '';
+      height: 32px;
+      width: 1px;
+      position: absolute;
+      right: 88px;
+      top: 9px;
+      background-color: $orange100;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    &--search {
+      background-color: $blue100;
+      border-radius: 50%;
+      width: 52px;
+      height: 52px;
+      transition: background-color 0.3s;
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: $blue200;
+      }
+    }
+
+    &--like {
+      padding-right: 30px;
+      position: relative;
+      transition: transform 0.3s;
+      &:hover,
+      &:focus,
+      &:active {
+        transform: translateY(-3px);
+      }
+    }
+
+    &--basket {
+      padding-left: 30px;
+      transition: transform 0.3s;
+      &:hover,
+      &:focus,
+      &:active {
+        transform: translateY(-3px);
+      }
+    }
+
+    &--menu {
+    border-radius: 50%;
+    width: 52px;
+    height: 52px;
+    background-color: $blue200;
+    transition: background-color 0.3s;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $blue600;
+    }
+  }
+}
+
+
+  &__num {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    color: $black;
+    width: 16px;
+    height: 16px;
+    background-color: $white;
+    border-radius: 50%;
+    font-size: 10px;
+    right: 22px;
+    top: 11px;
+    &--basket {
+      right: -8px;
+    }
+  }
+
+  &__icon--menu {
+    fill: $white;
+  }
+}

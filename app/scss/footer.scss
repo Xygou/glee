@@ -1,0 +1,124 @@
+.footer {
+  padding-top: 80px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: $white400;
+  font-family: $Rubik;
+  a {
+    transition: color 0.3s;
+    &:hover,
+    &:active,
+    &:focus {
+      color: $blue200;
+    }
+  }
+}
+
+.footer-top {
+  display: flex;
+  margin-bottom: 65px;
+  
+  &__logo {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
+  &__contact {
+    max-width: 200px;
+    margin-right: 100px;
+  }
+
+  &__services,
+  &__account{
+    margin-right: auto;
+    max-width: 250px;
+  }
+  
+  &__address-text,
+  &__phone {
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+
+  &__title {
+    padding-top: 15px;
+    font-size: 16px;
+    color: $blue670;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+
+  &__item {
+    margin-bottom: 10px;
+  }
+
+  &__link,
+  &__phone,
+  &__email {
+    color: inherit;
+  }
+  
+  &__phone span,
+  &__email span {
+    text-transform: uppercase;
+  }
+
+  &__text {
+    max-width: 240px;
+    margin-bottom: 35px;
+  }
+
+  &__form {
+    display: flex;
+  }
+
+  &__form-input {
+    padding: 0 15px ;
+    border: none;
+    background-color: $white100;
+    height: 40px;
+    &::placeholder {
+      padding: 0 5px 0 15px;
+      color: $blue650;
+    }
+  }
+
+  &__form-btn {
+    cursor: pointer;
+    border: none;
+    @include btn;
+    padding: 9px 15px;
+    transition: background-color 0.3s;
+    &:hover,
+    &:active,
+    &:hover {
+      background-color: $blue670;
+    }  
+  }
+}
+
+.footer-bottom {
+  border-top: 1px solid $blue120;
+  padding: 35px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__nav {
+    display: flex; 
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+    position: relative;
+    &::after {
+      content: '|';
+      position: absolute;
+      color: $white400;
+      right: -18px;
+    }
+  }
+  &__link {
+    color: $white400;
+  }
+}
