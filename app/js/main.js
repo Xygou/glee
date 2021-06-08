@@ -4,6 +4,11 @@ $(function(){
     arrows: false
   });
 
+  $('.partners__wrapper').slick({
+    arrows: false,
+  });
+
+
   var containerEl1 = document.querySelector('[data-ref="container-1"]');
   var containerEl2 = document.querySelector('[data-ref="container-2"]');
  
