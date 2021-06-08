@@ -1,18 +1,15 @@
 .header__inner {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 45px 0;
-  .logo {
-    margin-right: 170px
-  }
 }
 
 .menu {
   display: flex;
   font-family: $Rubik;
   font-weight: 500;
-  margin: auto;
+  padding-left: 150px;
   &__item {
     &:not(:last-child) {
       margin-right: 30px;
@@ -41,7 +38,6 @@
 
   &__wrapper {
     background-color: $red400;
-    width: 180px;
     display: flex;
     justify-content: center;
     border-radius: 30px;
@@ -77,24 +73,33 @@
     }
 
     &--like {
-      padding-right: 30px;
+      padding:  0 30px 0 40px;
       position: relative;
       transition: transform 0.3s;
-      &:hover,
+      &:hover {
+        transform: translateY(-3px);
+      }
       &:focus,
       &:active {
-        transform: translateY(-3px);
+        background-color: $blue200;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
       }
     }
 
     &--basket {
-      padding-left: 30px;
+      padding: 0 40px 0 30px;
       transition: transform 0.3s;
-      &:hover,
-      &:focus,
-      &:active {
+      &:hover {
         transform: translateY(-3px);
       }
+      &:focus,
+      &:active {
+        background-color: $blue200;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+      }
+
     }
 
     &--menu {
@@ -126,7 +131,7 @@
     right: 22px;
     top: 11px;
     &--basket {
-      right: -8px;
+      right: 34px;
     }
   }
 

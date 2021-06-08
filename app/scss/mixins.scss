@@ -1,0 +1,30 @@
+@mixin btn {
+  display: inline-block;
+  background-color: $blue200;
+  color: $white;
+  font-family: $Rubik;
+  font-weight: 500;;
+  font-size: 15px;
+  padding: 22px 26px; 
+}
+
+@mixin text-clamp($lines: 2, $line-height: false) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+
+  // Fallback for non-Webkit browsers
+  // (won't show `…` at the end of the block)
+  @if $line-height {
+      max-height: $line-height * $lines * 1px;
+  }
+}
+
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}

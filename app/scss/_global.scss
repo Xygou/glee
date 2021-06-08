@@ -1,9 +1,21 @@
+html,
+body {
+  height: 100%;
+}
+
+
 body {
   font-size: 16px;
   line-height: 1.2;
-  font-family: 'DMSans';
+  font-family: $DMSans;
   font-weight: 400;
   font-style: normal;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
 }
 
 button {
@@ -15,11 +27,9 @@ button {
   padding: 0 15px;
   margin: 0 auto;
   &--large {
-    max-width: 1800px; 
+    max-width: 1800px;
   }
 }
-
-
 
 .visually-hidden {
   position: absolute;

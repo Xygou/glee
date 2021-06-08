@@ -1,0 +1,17 @@
+.partners {
+  background-color: $orange60;
+  
+
+  &__logos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 440px;
+    margin: 0 50px;
+  }
+
+  &__logo {
+    margin-top: 150px;
+  }
+}
+

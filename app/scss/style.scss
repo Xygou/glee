@@ -1,14 +1,17 @@
 @import 'fonts';
 @import 'vars';
+@import 'mixins';
 @import 'reset';
 @import 'libs';
 @import 'global';
 
 
-@import 'header';
+@import 'components/header';
 
-@import 'top-slider';
-@import 'info-support';
-@import 'products-week';
+@import 'components/top-slider__section';
+@import 'components/products-week';
+@import 'components/new-desing';
+@import 'components/insights';
+@import 'components/partners';
 
-@import 'footer';
+@import 'components/footer';

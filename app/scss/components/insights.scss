@@ -1,0 +1,134 @@
+.insights {
+  padding-top: 120px;
+  margin-bottom: -160px;
+
+  &__card {
+    background-color: $white;
+    box-shadow: $black-shadow2;
+    border-radius: 5px;
+  }
+
+  &__items {
+    display: flex;
+  }
+  
+  &__item {
+    width: 370px;
+  }
+
+  &__content {
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 130px;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+
+  &__link {
+    position: relative;
+    padding-right: 20px;
+    font-weight: 700;
+    color: $black200;
+    &:hover {
+      color: $blue600;
+      .insights__icon {
+        fill: $blue600;
+      }
+    }
+  }
+  
+  &__image {
+    margin-bottom: 30px;
+  }
+
+  &__icon {
+    position: absolute;
+    width: 11px;
+    height: 10px;
+    top: 4px;
+    right: 0;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__mark {
+    position: absolute;
+    color: white;
+    background-color: $blue200;
+    width: 100px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    bottom: 147px;
+    left: 28px;
+    text-transform: uppercase;
+    font-family: $Poppins;
+    transition: background-color 0.5s;
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $blue600;
+    }
+  }
+
+  &__text {
+    color: $black200;
+    font-weight: 500;
+    font-size: 18px;
+    padding-bottom: 20px;
+    max-width: 290px;
+  }
+
+  &__data {
+    border-top: 1px solid $red50;
+    padding: 15px 0 30px;
+    max-width: 320px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    display: flex;
+    font-size: 12px;
+    max-width: 350px;
+  }
+
+  &__date,
+  &__name {
+    position: relative;
+    padding-left: 30px;
+    transition: color 0.5s;
+    &:hover,
+    &:active,
+    &:focus {
+      color: $blue200;
+      .insights__pic {
+        fill: $blue200;
+      }
+    }
+  }
+
+  &__pic {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 15px;
+    top: 1px;
+    transition: fill 0.5s;
+  }
+}
+
+

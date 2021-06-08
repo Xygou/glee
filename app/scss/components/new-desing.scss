@@ -1,0 +1,69 @@
+.new-design {
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 30px;
+  }
+
+  &__item {
+   position: relative;
+   margin-bottom: 5px;
+  }
+
+  &__wrapper {
+    position: absolute;
+    top: 35px;
+    left: 35px;
+  }
+  
+  &__name {
+    font-size: 20px;
+    max-width: 180px;
+    margin-bottom: 15px;
+  }
+
+  &__type {
+    font-weight: 700;
+    color: $blue250;
+  }
+
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.video {
+  padding-top: 120px;
+    
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .cls-1, .cls-2 {
+      transition: 0.7s;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      cls-1, .cls-2 {
+        fill:$blue700;
+      }
+    }
+  }
+}
+
+
+
+
+
+

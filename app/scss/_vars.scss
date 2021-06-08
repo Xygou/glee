@@ -1,12 +1,21 @@
 $red400: #fcd7b6;
+
+$red50: #e0e0e0;
+
+$orange200:#fde3cc;
 $orange100:#fde7d3;
+$orange70: #feefe2;
+$orange60:#fdf6ef;
 $orange50:#e8e4df;
+
+$green50: #b3b7b5;
 
 
 $blue700: #243f4d;
 $blue670:#2e2f50;
 $blue650: #234969;
 $blue600: #436372;
+$blue250: #a9bfcb;
 $blue200: #a3bbc8;
 $blue150: #a3bac7;
 $blue120: #dae4e9;
@@ -20,35 +29,13 @@ $white200: #8b8b8b;
 $white100: #fef7f0;
 $white: #fff;
 
+$black-shadow2:0px 6px 47px 3px rgba(37, 37, 37, 0.05);
 $black-shadow: rgba(37, 37, 37, 0.05);
-$black100: #1a1a1a; 
+$black300: #343434;
+$black200:#262626; 
+$black100: #1a1a1a;
 $black: #000;
 
-$Rubik: 'Rubik';
-$DMSans: 'DMSans';
-
-
-
-@mixin btn {
-  display: inline-block;
-  background-color: $blue200;
-  color: $white;
-  font-family: $Rubik;
-  font-weight: 500;;
-  font-size: 15px;
-  padding: 22px 26px; 
-}
-
-@mixin text-clamp($lines: 2, $line-height: false) {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: $lines;
-
-  // Fallback for non-Webkit browsers
-  // (won't show `…` at the end of the block)
-  @if $line-height {
-      max-height: $line-height * $lines * 1px;
-  }
-}
-
+$Rubik: 'Rubik', Tahoma, sans-serif;
+$DMSans: 'DMSans', Arial, sans-serif;
+$Poppins: 'Poppins', Arial, sans-serif;

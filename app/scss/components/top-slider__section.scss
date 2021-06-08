@@ -1,8 +1,11 @@
 .top-slider {
-  padding: 100px 0 45px;
+  padding-top: 100px;
   background-color: $red400;
   color: $blue700;
-  max-width: 1770px;
+
+  &__inner {
+    padding-bottom: 45px;
+  }
   
   &__content {
     margin: 0 100px 85px 0;
@@ -60,7 +63,7 @@
     @include btn;
     padding-right: 100px;
     position: relative;
-    transition: transform 0.5s;
+    transition: transform 0.5s, background-color 0.5s;
     &::after {
       position: absolute;
       content: '';
@@ -76,6 +79,7 @@
     &:active,
     &:focus {
       transform: translateX(20px);
+      background-color: $blue600;
     }
     
   }
@@ -93,7 +97,7 @@
       cursor: pointer;
       border: none;
       border-radius: 50%;
-      background-color: #fde3cc;
+      background-color: $orange200;
       font-size: 10px;
       width: 30px;
       height: 30px;
@@ -111,5 +115,68 @@
 
   .slick-dots .slick-active button {
     background-color: $white;
+  }
+}
+
+.info-support {
+  background-color: $white100;
+  margin: 0 auto;
+
+  &__items {
+    display: flex;
+    
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 170px;
+    &:not(:last-child) {
+      border-right: 1px solid $orange50;
+    }
+  }
+
+  &__wrapper { 
+    padding-left: 75px;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      background-repeat: no-repeat;
+      left: 0;
+      width: 65px;
+      height: 55px;
+    }
+
+    &--time::before {
+      background-image: url(../images/icons/time.svg);
+    }
+
+    &--truck::before {
+      background-image: url(../images/icons/delivery-truck.svg);
+    }
+    
+    &--card::before {
+      background-image: url(../images/icons/credit-card.svg);
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 700;
+    color: $white500;
+    margin-bottom: 5px;
+  }
+
+  &__text {
+    line-height: 2.2;
+    color: $white450;
+    font-size: 16px;
+    max-width: 215px;
+    &--mini {
+      max-width: 200px
+    }
   }
 }

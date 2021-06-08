@@ -34,7 +34,7 @@
     max-width: 250px;
   }
   
-  &__address-text,
+  &__location,
   &__phone {
     display: inline-block;
     margin-bottom: 12px;
@@ -52,12 +52,6 @@
   &__item {
     margin-bottom: 10px;
   }
-
-  &__link,
-  &__phone,
-  &__email {
-    color: inherit;
-  }
   
   &__phone span,
   &__email span {
@@ -73,7 +67,7 @@
     display: flex;
   }
 
-  &__form-input {
+  &__input {
     padding: 0 15px ;
     border: none;
     background-color: $white100;
@@ -84,7 +78,7 @@
     }
   }
 
-  &__form-btn {
+  &__btn {
     cursor: pointer;
     border: none;
     @include btn;
@@ -93,7 +87,7 @@
     &:hover,
     &:active,
     &:hover {
-      background-color: $blue670;
+      background-color: $blue600;
     }  
   }
 }
@@ -108,16 +102,20 @@
     display: flex; 
   }
 
-  &__item:not(:last-child) {
-    margin-right: 30px;
-    position: relative;
-    &::after {
-      content: '|';
-      position: absolute;
-      color: $white400;
-      right: -18px;
+  &__item {
+    &:not(:last-child) {
+      margin-right: 30px;
+      position: relative;
+      &::after {
+        content: '|';
+        position: absolute;
+        color: $white400;
+        right: -18px;
+      }
     }
   }
+  
+
   &__link {
     color: $white400;
   }

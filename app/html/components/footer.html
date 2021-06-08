@@ -1,23 +1,25 @@
 <footer class="footer">
+  <h2 class="visually-hidden">
+    Our contacts
+  </h2>
   <div class="container">
     <ul class="footer-top">
       <li class="footer-top__contact">
         <address class="footer-top__address">
           <a class="footer-top__logo" href="#">
             <img class="logo__img" src="images/logo.png" alt="Company`s logo" width="150" height="40">
-            <span class="visually-hidden">
-              Store logo
-            </span>
           </a>
-          <div class="footer-top__address-text">
+          <div class="footer-top__location">
             <p>
               ADDRESS: 4772 Wines Lane
               Houston, TX 77032
             </p>
           </div>
-          <a class="footer-top__phone" href="tel:+02838388393"><span>Telephone: </span>+832-347-5843
+          <a class="footer-top__phone" href="tel:+02838388393">
+            <span>Telephone: </span>+832-347-5843
           </a>
-          <a class="footer-top__email" href="mailto:Youremail@gmail.com"><span>Email: </span>contact@Glee.com</a>
+          <a class="footer-top__email" href="mailto:Youremail@gmail.com">
+            <span>Email: </span>contact@Glee.com</a>
         </address>
       </li>
       <li class="footer-top__services">
@@ -72,8 +74,13 @@
             </p>
           </div>
           <form class="footer-top__form" action="#">
-            <input class="footer-top__form-input" type="email" placeholder="Email address">
-            <button class="footer-top__form-btn" type="submit">Subscribe</button>
+            <label for="email">
+              <span class="visually-hidden">
+								Email input field
+							</span>
+            </label>
+            <input class="footer-top__input" type="email" id="email" name="email" placeholder="Email address">
+            <button class="footer-top__btn" type="submit">Subscribe</button>
           </form>
       </li>
     </ul>
