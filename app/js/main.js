@@ -1,4 +1,15 @@
 $(function(){
+
+  $('.footer-top__title-btn').on('click', function(){
+    $(this).siblings().slideToggle();
+    $(this).toggleClass('active');
+  });
+
+  $('.menu__btn').on('click', function(){
+    $('.menu').toggleClass('menu--active')
+  });
+
+
   $('.top-slider__inner').slick({
     dots:true,
     arrows: false

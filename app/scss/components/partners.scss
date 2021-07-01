@@ -1,5 +1,8 @@
 .partners {
   background-color: $orange60;
+  @include w($s) {
+    padding-bottom: 20px;
+  }
   
 
   &__logos {
@@ -8,10 +11,22 @@
     justify-content: space-between;
     height: 440px;
     margin: 0 50px;
+    @include w($m) {
+      flex-wrap: wrap;
+      margin: 0 auto;
+      height: auto;
+    }
+    @include w($s) {
+      flex-direction: column;
+    }
   }
 
   &__logo {
     margin-top: 150px;
+    @include w($m) {
+      margin: 60px 30px 30px;
+    }
   }
+  
 }
 

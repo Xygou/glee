@@ -1,27 +1,32 @@
 .insights {
   padding-top: 120px;
   margin-bottom: -160px;
+  position: relative;
+  z-index: 3;
 
-  &__card {
-    background-color: $white;
-    box-shadow: $black-shadow2;
-    border-radius: 5px;
+  &__title {
+    font-size: 36px;
   }
 
   &__items {
     display: flex;
+    justify-content: space-between;
+    @include w($l) {
+      flex-direction: column;
+    }
+    @include w($m) {
+      margin-bottom: 100px;
+    }
   }
+  
   
   &__item {
     width: 370px;
-  }
-
-  &__content {
-    padding: 0 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 130px;
+    position: relative;
+    @include w($l) {
+      width: auto;
+      margin-bottom: 50px;
+    }
   }
 
   &__top {
@@ -30,22 +35,30 @@
     justify-content: space-between;
     margin-bottom: 50px;
   }
-
+  
   &__link {
     position: relative;
     padding-right: 20px;
     font-weight: 700;
     color: $black200;
+    &:focus {
+      color: $blue200;
+      .insights__icon {
+        fill: $blue200;
+      }
+    }
     &:hover {
       color: $blue600;
       .insights__icon {
         fill: $blue600;
       }
     }
-  }
-  
-  &__image {
-    margin-bottom: 30px;
+    &:active {
+      color: $red400;
+      .insights__icon {
+        fill: $red400;
+      }
+    }
   }
 
   &__icon {
@@ -55,17 +68,37 @@
     top: 4px;
     right: 0;
   }
+}
 
-  &__items {
+.insights-card {
+  background-color: $white;
+  box-shadow: $black-shadow2;
+  border-radius: 5px;
+
+  &__content {
+    padding: 0 30px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    height: 130px;
+  }
+  
+  &__image {
+    margin-bottom: 30px;
+    width: 370px;
+    height: 245px;
+    @include w($l) {
+      width: auto;
+      height: auto;
+    }
   }
 
-  &__item {
-    position: relative;
+  &__photo {
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
   }
 
-  &__mark {
+  &__category {
     position: absolute;
     color: white;
     background-color: $blue200;
@@ -79,12 +112,6 @@
     left: 28px;
     text-transform: uppercase;
     font-family: $Poppins;
-    transition: background-color 0.5s;
-    &:hover,
-    &:active,
-    &:focus {
-      background-color: $blue600;
-    }
   }
 
   &__text {
@@ -95,7 +122,7 @@
     max-width: 290px;
   }
 
-  &__data {
+  &__inner {
     border-top: 1px solid $red50;
     padding: 15px 0 30px;
     max-width: 320px;
@@ -106,17 +133,31 @@
     max-width: 350px;
   }
 
-  &__date,
+  &__date {
+    position: relative;
+    padding-left: 30px;
+  }
+
   &__name {
     position: relative;
     padding-left: 30px;
-    transition: color 0.5s;
-    &:hover,
-    &:active,
+    transition: color 0.3s;
     &:focus {
       color: $blue200;
-      .insights__pic {
+      .insights-card__pic {
         fill: $blue200;
+      }
+    }
+    &:hover {
+      color: $blue600;
+      .insights-card__pic {
+        fill: $blue600;
+      }
+    }
+    &:active {
+      color: $red400;
+      .insights-card__pic {
+        fill: $red400;
       }
     }
   }
@@ -130,5 +171,3 @@
     transition: fill 0.5s;
   }
 }
-
-

@@ -2,16 +2,28 @@
   padding-top: 100px;
   background-color: $red400;
   color: $blue700;
+  @include w($l) {
+    padding-top: 50px;
+  }
 
   &__inner {
     padding-bottom: 45px;
+    @include w($l) {
+      padding-bottom: 25px;
+    }
   }
   
   &__content {
     margin: 0 100px 85px 0;
+    @include w($xl) {
+      margin-right: 0;
+    }
+    @include w($m) {
+      margin-bottom: 30px;
+    }
   }
 
-  &__title {
+  &__name {
     font-size: 70px;
     @include text-clamp;
     font-family: $Rubik;
@@ -19,18 +31,35 @@
     margin-bottom: 20px;
     max-width: 420px;
     text-transform: uppercase;
+    @include w($l) {
+      font-size: 50px;
+    }
+    @include w($xs) {
+      font-size: 44px;
+    }
   }
 
-  &__img-wrapper {
+  &__box {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 640px;
+    @include w($xxl) {
+      width: 50%;
+      padding: 0 15px;
+      height: 540px;
+    }
+    @include w($m) {
+      display: none;
+    }
   }
 
   &__img {
     width: 640px;
     height: 264px;
+    @include w($xxl) {
+      height: auto;
+    }
   }
 
   &__text {
@@ -38,6 +67,9 @@
     font-size: 18px;
     font-family: $Rubik;
     margin-bottom: 40px;
+    @include w($m) {
+      max-width: none;
+    }
   }
 
   &__wrapper {
@@ -45,19 +77,39 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    @include w($l) {
+      padding: 0 15px;
+    }
+    @include w($m) {
+      display: block;
+    }
     &::after {
       content: '';
       position: absolute;
-      background-image: url(../images/top-slider-bg.png);
-      background-repeat: no-repeat;
-      background-position:  100% 50%;
+      border-radius: 50%;
+      background: linear-gradient( 270deg,rgba(255,255,255,1), rgba(255,255,255,0));
       height: 640px;
       width: 640px;
       right: 160px;
       z-index: -1;
+      @include w($xxl) {
+        width: 500px;
+        height: 500px;
+        right: 44px;
+        top: 10px
+      }
+      @include w($l) {
+        width: 400px;
+        height: 400px;
+        top: 50px;
+      }
+      @include w($m) {
+        width: 200px;
+        height: 200px;
+        top: 0;
+      }
     }
   }
-
 
   &__link {
     @include btn;
@@ -67,9 +119,7 @@
     &::after {
       position: absolute;
       content: '';
-      background-image: url(../images/icons/arrow.svg);
-      background-repeat: no-repeat;
-      background-size: cover;
+      background-image: url(../images/icons/arrow-right-white.svg);
       width: 22px;
       height: 9px;
       right: 20px;
@@ -81,7 +131,6 @@
       transform: translateX(20px);
       background-color: $blue600;
     }
-    
   }
 
   .slick-dots {
@@ -124,7 +173,9 @@
 
   &__items {
     display: flex;
-    
+    @include w($l) {
+     flex-wrap: wrap;
+    }
   }
 
   &__item {
@@ -136,11 +187,19 @@
     &:not(:last-child) {
       border-right: 1px solid $orange50;
     }
+    @include w($l) {
+      border-bottom: 1px solid $orange50;
+      border-left: 1px solid $orange50;
+      border-right: 1px solid $orange50;
+     }
   }
 
   &__wrapper { 
     padding-left: 75px;
     position: relative;
+    @include w($xs) {
+      padding-right: 20px;
+    }
     &::before {
       content: '';
       position: absolute;
@@ -148,6 +207,9 @@
       left: 0;
       width: 65px;
       height: 55px;
+      @include w($xs) {
+        left: 10px;
+      }
     }
 
     &--time::before {

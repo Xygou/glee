@@ -3,6 +3,20 @@
   justify-content: space-between;
   align-items: center;
   padding: 45px 0;
+  flex-wrap: wrap;
+
+  @include w($l) {
+    padding: 20px 0;
+  }
+  @include w($s) {
+    padding: 15px 0;
+  }
+}
+
+.logo {
+  @include w($l) {
+    margin-bottom: 15px;
+  }
 }
 
 .menu {
@@ -10,9 +24,80 @@
   font-family: $Rubik;
   font-weight: 500;
   padding-left: 150px;
+
+  @include w($xxl) {
+    padding-left: 50px;
+  }
+
+  @include w($xl) {
+    position: absolute;
+    top: 150px;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% - 15px);
+    padding: 0;
+    z-index: 5;
+    transition: transform 0.3s;
+    background-color: $white;
+    transform: translateY(-200%);
+    &.menu--active {
+      transform: translateY(0);
+    }
+  }
+
+
+  &__btn {
+    display: none;
+    @include w($xl) {
+      order: 1;
+      height: 52px;
+      width: 52px;
+      border: none;
+      background-color: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      background-color: $red400;
+      border-radius: 50%;
+      &::after,
+      &::before,
+      span {
+        content: '';
+        position: absolute;
+        background-color: $blue600;
+        width: 50%;
+        height: 3px;
+      }
+      &::before {
+        top: 30%;
+      }
+      &::after {
+        bottom: 30%;
+      }
+    }
+
+    @include w($s) {
+      order: 0;
+      margin-bottom: 10px;
+    }
+
+  }
+
+
+
   &__item {
     &:not(:last-child) {
       margin-right: 30px;
+      @include w($xl) {
+        margin-right: 0;
+      }
+    }
+
+    @include w($xl) {
+      padding-right: 15px;
+      width: 100%;
+      text-align: center;
     }
   }
   
@@ -20,16 +105,47 @@
   &__link {
     color: $blue600;
     transition: color 0.3s;
-    &:hover,
-    &:focus,
-    &:active {
+    &:focus {
+      color: $blue200;
+    }
+    &:hover{
       color: $red400;
     }
+    &:active {
+      color: $red500;
+    }
+
+    @include w($xl) {
+      padding: 25px 0;
+      text-align: center;
+      display: block;
+    }
+
+    @include w($s) {
+      padding: 15px 0;
+    }
+    
+    
   }
+
+  
 }
 
 .user-nav {
   display: flex;
+  @include w($xl) {
+    margin: 0 20px 0 auto;
+  }
+
+  @include w($s) {
+    width: 100%;
+    margin: 0;
+  }
+
+  @include w($s) {
+    justify-content: flex-end;
+  }
+
   &__icon {
     width: 19px;
     height: 17px;
@@ -52,6 +168,9 @@
       top: 9px;
       background-color: $orange100;
     }
+    @include w($s) {
+      margin: 0 5px;
+    }
   }
 
   &__link {
@@ -65,41 +184,50 @@
       width: 52px;
       height: 52px;
       transition: background-color 0.3s;
-      &:hover,
-      &:focus,
-      &:active {
+      &:focus {
+        background-color: $red400;
+      }
+      &:hover{
         background-color: $blue200;
       }
+      &:active {
+        background-color: $red500;
+      }
+      
     }
 
     &--like {
       padding:  0 30px 0 40px;
       position: relative;
-      transition: transform 0.3s;
-      &:hover {
-        transform: translateY(-3px);
+      transition: background-color 0.3s;
+      border-top-left-radius: 30px;
+      border-bottom-left-radius: 30px;
+      &:focus {
+        background-color: $blue100;
       }
-      &:focus,
-      &:active {
+      &:hover{
         background-color: $blue200;
-        border-top-left-radius: 30px;
-        border-bottom-left-radius: 30px;
       }
+      &:active {
+        background-color: $red500;
+      }
+     
     }
 
     &--basket {
       padding: 0 40px 0 30px;
       transition: transform 0.3s;
-      &:hover {
-        transform: translateY(-3px);
+      border-top-right-radius: 30px;
+      border-bottom-right-radius: 30px;
+      &:focus {
+        background-color: $blue100;
       }
-      &:focus,
-      &:active {
+      &:hover{
         background-color: $blue200;
-        border-top-right-radius: 30px;
-        border-bottom-right-radius: 30px;
       }
-
+      &:active {
+        background-color: $red500;
+      }
     }
 
     &--menu {
@@ -108,12 +236,17 @@
     height: 52px;
     background-color: $blue200;
     transition: background-color 0.3s;
-    &:hover,
-    &:focus,
-    &:active {
+    &:focus {
+      background-color: $red400;
+    }
+    &:hover{
       background-color: $blue600;
     }
+    &:active {
+      background-color: $red500;
+    }
   }
+  
 }
 
 
