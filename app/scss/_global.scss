@@ -47,6 +47,9 @@ button {
   padding: 35px 0;
   &__list {
     display: flex;
+    @include w($lm) {
+      justify-content: center;
+    }
   }
   
   &__item {
