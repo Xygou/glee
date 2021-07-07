@@ -1,11 +1,25 @@
 .products-list {
   padding: 120px 0 100px;
+  @include w($l) {
+    padding: 60px 25px 50px;
+  }
+  @include w($xs) {
+    padding: 30px 15px 25px;
+  }
   &__inner {
     display: flex;
+    @include w($m) {
+      flex-direction: column;
+    }
+
   }
+  
   &__filters {
     min-width: 270px;
     margin-right: 30px;
+    @include w($m) {
+      margin: 0 0 30px;
+    }
   }
 }
 
@@ -189,9 +203,21 @@
     .product-card {
       margin-bottom: 40px;
     }
+    @include w($xl) {
+      margin: 0 100px;
+    }
+    @include w($s) {
+      margin: 0 0 15px;
+      justify-content: center;
+    } 
+   
+    
   }
   &__filter {
     margin-bottom: 30px;
+    @include w($m) {
+      text-align: center;
+    }
   }
   &__text {
     margin-right: 15px;

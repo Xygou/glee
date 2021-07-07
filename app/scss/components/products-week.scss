@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   font-weight: 700;
-  @include w($xs) {
+  @include w($m) {
     flex-direction: column;
     align-items: center;
     margin-bottom: 15px;
@@ -86,7 +86,10 @@
     transform: translateY(-10px);
   }
   @include w($s) {
-    width: 100%;
+   width: calc(100vw - 30px);
+  }
+  @include w($l) {
+    transform: translateY(0);
   }
   .star {
     display: none;
@@ -105,7 +108,7 @@
     }
     .product-card__box {
       transform: none;
-      left: 70px;
+      left: 100px;
       bottom: 80px;
     }
     .product-card__btn{
@@ -118,7 +121,6 @@
       }
     }
 
-   
     .product-card__link {
       display: none;
     }
@@ -164,7 +166,7 @@
     }
     .product-card__desc {
       display: block;
-      
+      font-size: 16px;
       max-width: 420px;
       color: $blue700;
     }
