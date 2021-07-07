@@ -4,6 +4,9 @@
   line-height: 1.5;
   color: $white400;
   font-family: $Rubik;
+  @include w($s){
+    padding-top: 20px;
+  }
   a {
     transition: color 0.3s;
     &:hover,

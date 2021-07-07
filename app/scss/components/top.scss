@@ -1,0 +1,40 @@
+.top {
+  background-color: $blue100;
+  text-align: center;
+  padding: 30px 0;
+  font-family: $Rubik;
+  &__title {
+    font-size: 36px;
+    font-weight: 400;
+  }
+}
+
+.breadcrumbs {
+  display: flex;
+  justify-content: center;
+  &__list {
+    display: flex;
+  }
+  &__item {
+    padding-right: 20px;
+    color: $blue500;
+    position: relative;
+    font-size: 14px;
+    &::after {
+      content: '/';
+      position: absolute;
+      right: 5px;
+      
+    }
+    &:last-child {
+      color: $black;
+      padding-right: 0;
+      &::after {
+        display: none;
+      }
+    }
+  }
+  &__link {
+    color: inherit;
+  }
+}

@@ -3,6 +3,9 @@
   margin-bottom: -160px;
   position: relative;
   z-index: 3;
+  @include w($m) {
+    padding-top: 60px;
+  }
 
   &__title {
     font-size: 36px;
@@ -67,6 +70,9 @@
     height: 10px;
     top: 4px;
     right: 0;
+    @include w($xs) {
+      top: 15px;
+    }
   }
 }
 
@@ -75,6 +81,13 @@
   box-shadow: $black-shadow2;
   border-radius: 5px;
 
+  &__wrapper {
+    @include w($m) {
+      &:not(:last-child) {
+        padding-bottom: 20px;
+      }
+    }
+  }
   &__content {
     padding: 0 30px;
     display: flex;

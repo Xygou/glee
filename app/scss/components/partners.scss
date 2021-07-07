@@ -26,6 +26,12 @@
     @include w($m) {
       margin: 60px 30px 30px;
     }
+    @include w($s) {
+      margin: 20px;
+      &:first-child {
+        margin-top: 40px;
+      }
+    }
   }
   
 }
